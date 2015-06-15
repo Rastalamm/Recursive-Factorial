@@ -22,6 +22,13 @@ describe('Recursive Factoring', function () {
         recursion(6).should.equal(720);
       });
 
+      it('should return zero if 0 is the input', function () {
+        recursion(0).should.equal(0);
+      });
+      it('should return zero if the input is a negative function', function () {
+        recursion(-1).should.equal(0);
+      });
+
   });
 
 });
