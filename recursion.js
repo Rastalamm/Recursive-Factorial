@@ -1,19 +1,22 @@
 
-function recursion(num, numFactor){
+function recursion(num){
 
-  if(typeof num !== "number") return false;
-  if(num <= 0) return 0;
-
-
-  var numFactor = numFactor || 1;
-
-  if(num >= 1){
-
-    numFactor *= num;
-  return recursion(--num, numFactor);
+  if(typeof num !== "number") {
+    return false;
   }
 
-  return numFactor;
+  if (num <= 0){
+    return false;
+  }
+
+  if (num === 1){
+    return num;
+  }
+
+  // var nextNum = recursion(--num);
+  // console.log(nextNum, num);
+  return num * recursion(--num);
+
 
 }
 
